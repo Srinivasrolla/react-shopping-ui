@@ -1,0 +1,239 @@
+/* =========================
+GLOBAL STYLES
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  }
+
+body {
+font-family: "Segoe UI", sans-serif;
+background: #f5f7fa;
+overflow-x: hidden;
+}
+
+/* =========================
+HEADER
+========================= */
+
+.headerSection {
+display: flex;
+justify-content: space-between;
+align-items: center;
+background: #131921;
+padding: 15px 40px;
+color: white;
+flex-wrap: wrap;
+}
+
+.left h2 {
+color: #ff9900;
+font-size: 30px;
+font-weight: bold;
+}
+
+.centre ul {
+display: flex;
+list-style: none;
+gap: 25px;
+}
+
+.centre ul li {
+cursor: pointer;
+transition: 0.3s;
+}
+
+.centre ul li:hover {
+color: #ff9900;
+}
+
+.search input {
+width: 280px;
+padding: 10px 15px;
+border: none;
+outline: none;
+border-radius: 25px;
+}
+
+.right {
+display: flex;
+gap: 15px;
+}
+
+.signin,
+.cart {
+padding: 10px 18px;
+border-radius: 25px;
+cursor: pointer;
+font-weight: bold;
+}
+
+.signin {
+background: #ff9900;
+color: white;
+}
+
+.cart {
+background: #2874f0;
+color: white;
+}
+
+/* =========================
+MAIN BANNER
+========================= */
+
+.bannerSection {
+width: 100%;
+}
+
+.bannerBox img {
+width: 100%;
+display: block;
+height: auto;
+}
+
+/* =========================
+COLLECTION SECTION
+========================= */
+
+.collectionSection {
+width: 100%;
+padding: 30px;
+}
+
+.collectionSection h2 {
+text-align: center;
+font-size: 32px;
+margin-bottom: 25px;
+color: #222;
+}
+
+/* =========================
+WOMEN BANNER
+========================= */
+
+.womenBannerSection {
+width: 100%;
+margin-bottom: 30px;
+}
+
+.womenBanner {
+width: 100%;
+display: block;
+height: auto;
+border-radius: 12px;
+}
+
+/* =========================
+PRODUCT GRID
+========================= */
+
+.productGrid,
+.menImages {
+display: grid;
+grid-template-columns: repeat(3, 1fr);
+gap: 20px;
+}
+
+.productGrid img,
+.menImages img {
+width: 100%;
+height: 320px;
+object-fit: cover;
+border-radius: 12px;
+background: white;
+padding: 8px;
+box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+transition: 0.3s;
+}
+
+.productGrid img:hover,
+.menImages img:hover {
+transform: translateY(-5px);
+}
+
+/* =========================
+FOOTER
+========================= */
+
+.footer {
+background: #131921;
+color: white;
+text-align: center;
+padding: 20px;
+margin-top: 40px;
+}
+
+/* =========================
+TABLET
+========================= */
+
+@media screen and (max-width: 768px) {
+
+.headerSection {
+flex-direction: column;
+gap: 15px;
+}
+
+.centre ul {
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.search input {
+width: 220px;
+}
+
+.productGrid,
+.menImages {
+grid-template-columns: repeat(2, 1fr);
+}
+
+.productGrid img,
+.menImages img {
+height: 250px;
+}
+}
+
+/* =========================
+MOBILE
+========================= */
+
+@media screen and (max-width: 480px) {
+
+.headerSection {
+padding: 15px;
+}
+
+.left h2 {
+font-size: 24px;
+}
+
+.centre ul {
+gap: 10px;
+}
+
+.search input {
+width: 180px;
+}
+
+.collectionSection {
+padding: 15px;
+}
+
+.collectionSection h2 {
+font-size: 24px;
+}
+
+.productGrid,
+.menImages {
+grid-template-columns: 1fr;
+}
+
+.productGrid img,
+.menImages img {
+height: 220px;
+}
+}
